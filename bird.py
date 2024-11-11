@@ -1,4 +1,5 @@
 # 이것은 각 상태들을 객체로 구현한 것임.
+from random import randint
 
 from pico2d import get_time, load_image, SDL_KEYDOWN, SDL_KEYUP, SDLK_SPACE, SDLK_LEFT, SDLK_RIGHT, load_font
 
@@ -32,7 +33,7 @@ FRAMES_PER_ACTION = 14
 class Bird:
 
     def __init__(self):
-        self.x, self.y = 400, 200
+        self.x, self.y = randint(100, 1200), randint(100, 550)
         self.width = int(918 / 5)
         self.height = int(506 / 3)
         self.face_dir = 1

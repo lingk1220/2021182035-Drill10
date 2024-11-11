@@ -26,8 +26,10 @@ def init():
     grass = Grass()
     game_world.add_object(grass, 0)
 
-    bird = Bird()
-    game_world.add_object(bird, 1)
+    birds = [Bird() for _ in range(10)]
+
+    for bird in birds:
+        game_world.add_object(bird, 1)
 
 
 def finish():
